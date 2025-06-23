@@ -1221,7 +1221,7 @@ const uniqueQuestions = [
         options: [
             "Tích cực phòng ngự và chủ động phản công ",
             "Tích cực phòng ngự và chủ động phản công ",
-            "Quán triệt tư tưởng tích cực phòng thủ ",
+            "Quán triệt tư tưởng tích cực phòng thủ",
             "Tích cực tiến công kết hợp với phòng ngự"
         ],
         answer: "Quán triệt tư tưởng tích cực phòng thủ"
@@ -2052,13 +2052,23 @@ function startQuiz() {
 /**
  * Displays the current question and options.
  */
+
+function shuffle(array) {
+    let currentIndex = array.length
+    while (currentIndex != 0) {
+        let randomIndex = Math.floor(Math.random() * currentIndex)
+        currentIndex--;
+
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]]
+    }
+}
+
 function showQuestion() {
     resetState();
     const currentQuestion = questions[currentQuestionIndex];
     questionText.textContent = currentQuestion.question;
-    questionCounter.textContent = `Question ${currentQuestionIndex + 1} / ${questions.length
-        }`;
-
+    questionCounter.textContent = `Question ${currentQuestionIndex + 1} / ${questions.length}`;
+    shuffle(currentQuestion.options)
     // Create and display option buttons
     currentQuestion.options.forEach((option) => {
         const button = document.createElement("button");
