@@ -1,0 +1,55 @@
+body {
+    font-family: "Neue";
+    font-size: 150%;
+}
+.option-btn {
+  transition: background-color 0.3s, transform 0.2s;
+}
+.option-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.correct {
+  background-color: #22c55e !important; /* Green 500 */
+  color: white;
+  border-color: #16a34a;
+}
+.incorrect {
+  background-color: #ef4444 !important; /* Red 500 */
+  color: white;
+  border-color: #dc2626;
+}
+.disabled-options .option-btn {
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("./BeaufortforLOL-BoldItalic.woff");
+}
+footer {
+  text-transform: uppercase;
+  font-size: 70%;
+}
+
+footer a {
+  background: linear-gradient(0.25turn, #22817b, #ebf8e1, #ea49af);
+  background-size: 400% 400%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  animation: gradient 7s ease infinite;
+  border-radius: 4%;
+  padding: 6px;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

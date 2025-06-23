@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDQP-AN HP1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-100 text-slate-800 flex items-center justify-center min-h-screen p-4 flex-col gap-4">
+
+    <div id="quiz-container" class="bg-white w-full max-w-3xl rounded-2xl shadow-xl p-6 md:p-8">
+        
+        <!-- Quiz Header -->
+        <div id="quiz-header" class="mb-6 pb-4 border-b border-slate-200">
+            <h1 class="text-3xl font-bold text-slate-700">Giáo dục quốc phòng - An ninh: Học phần 1</h1>
+            <div class="flex justify-between items-center mt-3 text-sm text-slate-500">
+                <span id="question-counter" class="font-semibold bg-slate-200 text-slate-600 px-3 py-1 rounded-full">Question 1 / 200</span>
+            </div>
+        </div>
+
+        <!-- Question and Options -->
+        <div id="question-area">
+            <h2 id="question-text" class="text-xl md:text-2xl font-semibold mb-6 min-h-[80px]">Loading question...</h2>
+            <div id="options-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Options will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <!-- Quiz Controls -->
+        <div class="mt-8 text-center">
+            <button id="next-btn" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-300 hidden">Next Question</button>
+        </div>
+
+    </div>
+
+    <!-- Results Screen -->
+    <div id="results-container" class="bg-white w-full max-w-2xl rounded-2xl shadow-xl p-8 text-center hidden">
+        <h1 class="text-4xl font-bold text-indigo-600 mb-4">Quiz Complete!</h1>
+        <p class="text-slate-600 text-lg mb-6">Here's how you did:</p>
+        
+        <div class="bg-slate-100 rounded-lg p-6 mb-6">
+            <p class="text-2xl font-semibold text-slate-800">You scored</p>
+            <p id="percentage-score" class="text-6xl font-bold text-indigo-500 my-3">0%</p>
+            <p id="raw-score" class="text-lg text-slate-600">You answered 0 out of 200 questions correctly.</p>
+        </div>
+
+        <button id="restart-btn" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-300">
+            Try Again
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+<footer>
+    2025 - <a href="https://facebook.com/thuan.iub">Thuận Bùi</a> 
+</footer>
+</html>
